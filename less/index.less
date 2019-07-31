@@ -54,6 +54,121 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
+	width: 80%;
+	margin: 0 auto;
+	background-color: black;
 }
+@main-color: gold;
+@main-font: 'Titillium Web', sans-serif;
+@secondary-font-size: 2rem;
+
+section {
+	margin: 20px auto;
+}
+
+
+.flex-mixin() {
+	display: flex;
+	justify-content: space-between;
+}
+
+.font-mixin() {
+	font-size: @secondary-font-size;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+header {
+	font-family: @main-font;
+	font-size: @secondary-font-size;
+  nav {
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		a:last-child {
+			border-bottom: none;
+		}
+	}
+
+    a {
+		color: @main-color;
+
+		@media (max-width: 500px) {
+			padding: 5px 0;
+			text-decoration: none;
+			border-bottom: 1px solid gold;
+			width: 100%;
+		}
+	}
+	
+
+  }
+}
+
+.main-container {
+	font-family: @main-font;
+	font-size: 1.6rem;
+	background-color: @main-color;
+
+	.intro {
+		display: block;
+		  img {
+			  width: 50%;
+			  height: auto;
+			  padding-bottom: 10px;
+
+			  @media(max-width: 500px) {
+				  width: 100%;
+			  }
+		  }
+	  
+		  h1 {
+			  font-size: 5rem;
+		  }
+	  }
+	  
+	  .knowledge {
+		  .flex-mixin();
+
+		  @media (max-width: 500px) {
+			  display: flex;
+			  flex-direction: column;
+		  }
+	  
+		  .knowledge-box {
+			  width: 48%;
+
+			  @media (max-width: 500px) {
+				  width: 100%;
+				  margin: 10px auto;
+			  }
+
+			  h2 {
+				  .font-mixin();
+			  }
+		  }
+	  
+	  }
+	  
+	  .work-history h2 {
+		  .font-mixin();
+	  }
+	  
+	  .contact {
+	  
+		  address h2 {
+			  .font-mixin();
+		  }
+	  }
+}
+
+
+
+
 
