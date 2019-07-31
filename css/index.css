@@ -133,5 +133,93 @@ table {
 html,
 body {
   height: 100%;
-  background-color: red;
+  font-size: 62.5%;
+  width: 80%;
+  margin: 0 auto;
+  background-color: black;
+}
+section {
+  margin: 20px auto;
+}
+header {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  header nav a:last-child {
+    border-bottom: none;
+  }
+}
+header nav a {
+  color: gold;
+}
+@media (max-width: 500px) {
+  header nav a {
+    padding: 5px 0;
+    text-decoration: none;
+    border-bottom: 1px solid gold;
+    width: 100%;
+  }
+}
+.main-container {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.6rem;
+  background-color: gold;
+}
+.main-container .intro {
+  display: block;
+}
+.main-container .intro img {
+  width: 50%;
+  height: auto;
+  padding-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .main-container .intro img {
+    width: 100%;
+  }
+}
+.main-container .intro h1 {
+  font-size: 5rem;
+}
+.main-container .knowledge {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .main-container .knowledge {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.main-container .knowledge .knowledge-box {
+  width: 48%;
+}
+@media (max-width: 500px) {
+  .main-container .knowledge .knowledge-box {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+.main-container .knowledge .knowledge-box h2 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.main-container .work-history h2 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.main-container .contact address h2 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  font-weight: bold;
 }
